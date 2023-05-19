@@ -28,12 +28,8 @@ class Red implements TrafficLight {
     return false;
   }
 
-  updateCarForLight() {
-    if (this.isRed()) {
-      car.stop();
-    } else {
-      car.drive();
-    }
+  updateCar() {
+    car.stop();
   }
 }
 
@@ -50,12 +46,8 @@ class Yellow implements TrafficLight {
     return false;
   }
 
-  updateCarForLight() {
-    if (this.isRed()) {
-      car.stop();
-    } else {
-      car.drive();
-    }
+  updateCar() {
+    car.drive();
   }
 }
 
@@ -72,12 +64,8 @@ class Green implements TrafficLight {
     return true;
   }
 
-  updateCarForLight() {
-    if (this.isRed()) {
-      car.stop();
-    } else {
-      car.drive();
-    }
+  updateCar() {
+    car.drive();
   }
 }
 
