@@ -12,6 +12,7 @@ interface TrafficLight {
   isRed(): boolean;
   isYellow(): boolean;
   isGreen(): boolean;
+  updateCar(): void;
 }
 
 class Red implements TrafficLight {
