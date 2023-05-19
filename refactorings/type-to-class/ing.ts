@@ -8,7 +8,7 @@ const car = {
   },
 };
 
-enum TrafficLight {
+enum RawTrafficLight {
   RED,
   YELLOW,
   GREEN,
