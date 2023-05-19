@@ -15,8 +15,8 @@ enum RawTrafficLight {
 }
 
 const CYCLE = [TrafficLight.RED, TrafficLight.GREEN, TrafficLight.YELLOW];
-function updateCarForLight(current: TrafficLight) {
-  if (current === TrafficLight.RED) {
+function updateCarForLight(current: TrafficLight2) {
+  if (current.isRed()) {
     car.stop();
   } else {
     car.drive();
