@@ -23,4 +23,10 @@ function updateCarForLight(current: TrafficLight) {
   }
 }
 
+interface TrafficLight2 {
+  isRed(): boolean;
+  isYellow(): boolean;
+  isGreen(): boolean;
+}
+
 export {};
