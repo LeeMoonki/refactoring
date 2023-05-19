@@ -14,7 +14,6 @@ enum RawTrafficLight {
   GREEN,
 }
 
-const CYCLE = [TrafficLight.RED, TrafficLight.GREEN, TrafficLight.YELLOW];
 function updateCarForLight(current: TrafficLight2) {
   if (current.isRed()) {
     car.stop();
@@ -70,5 +69,7 @@ class Green implements TrafficLight2 {
     return true;
   }
 }
+
+const CYCLE = [new Red(), new Green(), new Yellow()];
 
 export {};
