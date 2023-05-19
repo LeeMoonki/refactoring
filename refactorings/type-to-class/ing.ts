@@ -8,13 +8,7 @@ const car = {
   },
 };
 
-enum RawTrafficLight {
-  RED,
-  YELLOW,
-  GREEN,
-}
-
-function updateCarForLight(current: TrafficLight2) {
+function updateCarForLight(current: TrafficLight) {
   if (current.isRed()) {
     car.stop();
   } else {
@@ -22,13 +16,13 @@ function updateCarForLight(current: TrafficLight2) {
   }
 }
 
-interface TrafficLight2 {
+interface TrafficLight {
   isRed(): boolean;
   isYellow(): boolean;
   isGreen(): boolean;
 }
 
-class Red implements TrafficLight2 {
+class Red implements TrafficLight {
   isRed() {
     return true;
   }
@@ -42,7 +36,7 @@ class Red implements TrafficLight2 {
   }
 }
 
-class Yellow implements TrafficLight2 {
+class Yellow implements TrafficLight {
   isRed() {
     return false;
   }
@@ -56,7 +50,7 @@ class Yellow implements TrafficLight2 {
   }
 }
 
-class Green implements TrafficLight2 {
+class Green implements TrafficLight {
   isRed() {
     return false;
   }
