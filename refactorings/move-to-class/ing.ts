@@ -8,14 +8,6 @@ const car = {
   },
 };
 
-function updateCarForLight(current: TrafficLight) {
-  if (current.isRed()) {
-    car.stop();
-  } else {
-    car.drive();
-  }
-}
-
 interface TrafficLight {
   isRed(): boolean;
   isYellow(): boolean;
@@ -64,6 +56,12 @@ class Green implements TrafficLight {
   }
 }
 
-const CYCLE = [new Red(), new Green(), new Yellow()];
+export const CYCLE = [new Red(), new Green(), new Yellow()];
 
-export {};
+export function updateCarForLight(current: TrafficLight) {
+  if (current.isRed()) {
+    car.stop();
+  } else {
+    car.drive();
+  }
+}
