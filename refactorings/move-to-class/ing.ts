@@ -72,9 +72,5 @@ class Green implements TrafficLight {
 export const CYCLE = [new Red(), new Green(), new Yellow()];
 
 export function updateCarForLight(current: TrafficLight) {
-  if (current.isRed()) {
-    car.stop();
-  } else {
-    car.drive();
-  }
+  current.updateCar();
 }
